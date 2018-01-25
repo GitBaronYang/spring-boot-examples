@@ -28,12 +28,12 @@ import java.io.StringReader;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
-/**
- * 描述: 单元测试
- *
- * @author yanpenglei
- * @create 2017-11-07 17:59
- **/
+/** 
+* @author  
+* @E-mail: 
+* @date 创建时间：2018年1月25日 上午11:43:44 
+* @version 1.0   
+*/
 public class BaseTest {
 
     private Directory directory;

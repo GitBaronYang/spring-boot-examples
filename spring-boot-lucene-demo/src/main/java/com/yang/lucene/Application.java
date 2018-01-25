@@ -4,12 +4,12 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 
-/**
- * 描述:
- *
- * @author: yanpenglei
- * @create: 2017/11/7 17:02
- */
+/** 
+* @author  
+* @E-mail: 
+* @date 创建时间：2018年1月25日 上午11:43:33 
+* @version 1.0   
+*/
 @SpringBootApplication
 @ComponentScan(value = {"com.yang.lucene"})
 public class Application {
