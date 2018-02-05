@@ -34,7 +34,7 @@ public class StudentMapperTest {
      *   <setting name="cacheEnabled" value="true"/>
      * @throws Exception
      */
-    @Test
+    //@Test
     public void testLocalCache() throws Exception {
         SqlSession sqlSession = factory.openSession(true); // 自动提交事务
         StudentMapper studentMapper = sqlSession.getMapper(StudentMapper.class);
@@ -51,7 +51,7 @@ public class StudentMapperTest {
      *  <setting name="cacheEnabled" value="true"/>
      * @throws Exception
      */
-    @Test
+    //@Test
     public void testLocalCacheClear() throws Exception {
         SqlSession sqlSession = factory.openSession(true); // 自动提交事务
         StudentMapper studentMapper = sqlSession.getMapper(StudentMapper.class);
@@ -68,7 +68,7 @@ public class StudentMapperTest {
      *   <setting name="cacheEnabled" value="true"/>
      * @throws Exception
      */
-    @Test
+    //@Test
     public void testLocalCacheScope() throws Exception {
         SqlSession sqlSession1 = factory.openSession(true); // 自动提交事务
         SqlSession sqlSession2 = factory.openSession(true); // 自动提交事务
@@ -97,7 +97,7 @@ public class StudentMapperTest {
      *  <setting name="cacheEnabled" value="true"/>
      * @throws Exception
      */
-    @Test
+    //@Test
     public void testCacheWithoutCommitOrClose() throws Exception {
         SqlSession sqlSession1 = factory.openSession(true); // 自动提交事务
         SqlSession sqlSession2 = factory.openSession(true); // 自动提交事务
@@ -115,7 +115,7 @@ public class StudentMapperTest {
      *  <setting name="cacheEnabled" value="true"/>
      * @throws Exception
      */
-    @Test
+    //@Test
     public void testCacheWithCommitOrClose() throws Exception {
         SqlSession sqlSession1 = factory.openSession(true); // 自动提交事务
         SqlSession sqlSession2 = factory.openSession(true); // 自动提交事务
@@ -124,7 +124,7 @@ public class StudentMapperTest {
         StudentMapper studentMapper2 = sqlSession2.getMapper(StudentMapper.class);
 
         System.out.println("studentMapper读取数据: " + studentMapper.getStudentById(1));
-        sqlSession1.close();
+        sqlSession1.commit();
         System.out.println("studentMapper2读取数据: " + studentMapper2.getStudentById(1));
 
     }
@@ -134,7 +134,7 @@ public class StudentMapperTest {
      *  <setting name="cacheEnabled" value="true"/>
      * @throws Exception
      */
-    @Test
+    //@Test
     public void testCacheWithUpdate() throws Exception {
         SqlSession sqlSession1 = factory.openSession(true); // 自动提交事务
         SqlSession sqlSession2 = factory.openSession(true); // 自动提交事务
@@ -160,7 +160,7 @@ public class StudentMapperTest {
      *  <setting name="cacheEnabled" value="true"/>
      * @throws Exception
      */
-    @Test
+    //@Test
     public void testCacheWithDiffererntNamespace() throws Exception {
         SqlSession sqlSession1 = factory.openSession(true); // 自动提交事务
         SqlSession sqlSession2 = factory.openSession(true); // 自动提交事务
@@ -206,7 +206,7 @@ public class StudentMapperTest {
         System.out.println("studentMapper2读取数据: " + studentMapper2.getStudentByIdWithClassInfo(1));
 
         classMapper.updateClassName("特色一班",1);
-        sqlSession3.commit();
+        //sqlSession3.commit();
 
         System.out.println("studentMapper2读取数据: " + studentMapper2.getStudentByIdWithClassInfo(1));
     }
