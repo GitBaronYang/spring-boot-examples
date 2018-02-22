@@ -34,7 +34,7 @@ public class StudentMapperTest {
      *   <setting name="cacheEnabled" value="true"/>
      * @throws Exception
      */
-    //@Test
+    @Test
     public void testLocalCache() throws Exception {
         SqlSession sqlSession = factory.openSession(true); // 自动提交事务
         StudentMapper studentMapper = sqlSession.getMapper(StudentMapper.class);
@@ -188,7 +188,7 @@ public class StudentMapperTest {
      *  <setting name="cacheEnabled" value="true"/>
      * @throws Exception
      */
-    @Test
+    //@Test
     public void testCacheWithDiffererntNamespaceWithCacheRef() throws Exception {
         SqlSession sqlSession1 = factory.openSession(true); // 自动提交事务
         SqlSession sqlSession2 = factory.openSession(true); // 自动提交事务
