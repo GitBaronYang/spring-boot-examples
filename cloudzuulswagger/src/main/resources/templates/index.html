@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8"></meta>
+<title>Insert title here</title>
+<script type="text/javascript" th:src="@{/js/common.js}"></script>
+<link rel="stylesheet" th:href="@{/css/common.css}" />
+</head>
+<body>
+已经有的
+<ul>
+   <li th:each="obj, objVs : ${datas}">
+   </li>
+</ul>
+添加1:
+ <form action="swaggerAPi/addServiceApi">
+     <input type="text" name="service_name" />
+     <input type="submit" value="提交" />
+ </form>
+ 移除:
+ <form action="swaggerAPi/removeServiceApi">
+     <input type="text" name="service_name" />
+     <input type="submit" value="提交" />
+ </form>
+</body>
+</html>
